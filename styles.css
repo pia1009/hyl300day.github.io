@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'JF Open Huninn';
+    src: url('fonts/jf-openhuninn-2.0.ttf') format('truetype');
+}
+
+body {
+    font-family: 'JF Open Huninn', cursive;
+    text-align: center;
+    background-color: #ffe6e6; /* 浅粉红色 */
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    padding: 20px;
+    display: none; /* 默认隐藏所有页面 */
+}
+
+.page.active {
+    display: block; /* 仅显示当前活动页面 */
+}
+
+h1, h2 {
+    margin: 20px 0;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    margin-top: 20px;
+    background-color: #ffcccc; /* 按钮背景颜色 */
+    border: none;
+    border-radius: 20px; /* 圆角 */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    color: #fff; /* 文字颜色 */
+    text-transform: uppercase; /* 文字大写 */
+    outline: none; /* 移除默认的外观 */
+    transition: background-color 0.3s ease; /* 过渡效果 */
+}
+
+button:hover {
+    background-color: #ff99cc; /* 悬停时的背景颜色 */
+}
+
+button:active {
+    transform: scale(0.95); /* 按下时缩小按钮 */
+}
+
+.cute-bear {
+    display: block; /* 确保图片为块级元素 */
+    margin-left: auto;
+    margin-right: 90px;
+    width: 250px; /* 调整小熊图片的宽度 */
+    height: auto; /* 保持比例 */
+}
+
+.extra-image {
+    max-width: 200px; /* 设置额外图片的最大宽度 */
+    height: auto; /* 高度自动调整，保持比例 */
+}
+
+.hidden {
+    display: none; /* 隐藏额外图片 */
+}
+
+
+
+/* 煙火 GIF 样式 */
+#fireworks-gif {
+    max-width: 100%; /* 最大寬度為容器寬度 */
+    height: auto; /* 自動調整高度 */
+    margin-top: 20px; /* 上邊距 */
+}
+
+#slideshow img {
+    width: 100%;
+    max-width: 300px;
+    display: none; /* 默认隐藏所有图片 */
+}
+
+#slideshow img.active {
+    display: block; /* 仅显示当前活动图片 */
+}
+
+/* 倒计时文字样式 */
+#countdown {
+    font-family: 'JF Open Huninn', cursive;
+    font-size: 48px; /* 更大的字体 */
+    color: #ff6699; /* 可爱的粉红色 */
+    text-shadow: 2px 2px #ffe6e6; /* 阴影效果 */
+    margin-top: 20px;
+}
+
+
+
+/* 信封样式 */
+.envelope {
+    margin-top: 20px;
+    width: 200px; /* 调整小熊图片的宽度 */
+    height: auto; 
+    opacity: 0;
+    animation: fadeIn 2s forwards, float 4s infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.letter {
+    position: absolute; /* 绝对定位 */
+    top: -300px; /* 初始位置在页面顶部之外 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%);
+    opacity: 0; /* 初始不透明 */
+    transition: all 3s ease-in-out; /* 使用过渡效果实现动画 */
+}
+
+.letter.open {
+    top: 200px; /* 继续按钮下方的位置 */
+    opacity: 1; /* 透明度变为1，显示信件 */
+}
+
+.letter img {
+    width: 100%; /* 设置图片宽度为容器的100% */
+    height: auto; /* 自动调整高度，保持比例 */
+}
+
+.reject-button {
+    position: absolute;
+    padding: 10px 20px;
+    background-color: #ff99cc; /* 悬停时的背景颜色 */
+    color: #fff; /* 文字颜色 */
+    border: none;
+    border-radius: 20px; /* 圆角 */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.reject-button:hover {
+    background-color: #ff6699; /* 按钮背景颜色 */
+}
+
+#confession-video {
+    width: 60%; 
+    max-width: 800px; 
+    height: auto; 
+}
+
+
+
+
+

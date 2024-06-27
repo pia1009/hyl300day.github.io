@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哇嗚洪屁屁看到了 (◍•ᴗ•◍) </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 欢迎页 -->
+    <div class="page active" id="welcome-page">
+        <h1>小寶 這是我們的第300天</h1>
+        <button onclick="startCelebration()">go</button>
+        <img src="images/bear.png" alt="Cute Bear" class="cute-bear">
+    </div>
+
+    <!-- 倒计时页 -->
+    <div class="page" id="countdown-page">
+        <h2>其實我有一些話想跟你說 (●__●)</h2>
+        <div id="countdown">10</div>
+        
+        <div id="envelope" class="hidden">
+            <img src="images/envelope.png" alt="Envelope" class="envelope">
+            <button onclick="openEnvelope()">打開信</button>
+        </div>
+        <div id="extra-image">
+            <img src="images/extra-image.png" alt="Extra Image" class="extra-image hidden">
+        </div>
+    </div>
+
+    <!-- 信封页 -->
+    <div class="page" id="letter-page">
+        <h3>300天快樂，雖然我的字有點醜(๑• . •๑)</h3>
+        <div id="letter" class="letter">
+            <img src="images/letter.png" alt="Letter">
+        </div>
+        <button onclick="nextPage('memories-page')">繼續</button>
+    </div>
+
+    <!-- 回忆页 -->
+    <div class="page" id="memories-page">
+        <h2>在這300天裡我們一起做過很多事情</h2>
+        <div id="slideshow">
+            <img src="images/memory1.jpg" alt="Memory 1">
+            <img src="images/memory2.jpg" alt="Memory 2">
+            <img src="images/memory3.jpg" alt="Memory 3">
+        </div>
+        <button onclick="nextPage('confession-page')">繼續</button>
+    </div>
+
+    <!-- 告白页 -->
+    <div class="page" id="confession-page">
+        <h2>300天只是個剛開始，想和你在一起很久很久</h2>
+        <p>雖然我說了很多廢話 就是有點害羞(｡•́ - •̀｡)</p>
+        <video id="confession-video" controls>
+            <source src="videos/confession.mp4" type="video/mp4">
+            哎呀糟糕不能播放。
+        </video>
+        <button onclick="nextPage('blessing-page')">好</button>
+        <button onclick="nextPage('reject-page')">不好</button>
+    </div>
+
+    <div class="page" id="reject-page">
+        <h2>你真的要拒絕我吗？( ˃̣̣̥᷄⌓˂̣̣̥᷅ )</h2>
+        <button onclick="tooGood()">不忍拒绝</button>
+        <button id="cruel-button" onclick="cruelReject()">殘忍拒絕</button>
+        <div id="reject-message"></div>
+    </div>
+    
+    <!-- 祝福页 -->
+    <div class="page" id="blessing-page">
+        <h2>謝謝小寶 300天快樂窩 ʕ •̀ o •́ ʔ</h2>
+        <img src="videos/firework.gif" alt="Fireworks GIF">
+        <button onclick="nextPage('end-page')">結束</button>
+    </div>
+
+    <!-- 结尾页 -->
+    <div class="page" id="end-page">
+        <h2>我最愛你了(๑˘ ₃˘๑)</h2>
+        <button onclick="startCelebration()">再看一次</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
